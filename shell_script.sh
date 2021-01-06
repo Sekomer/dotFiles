@@ -35,37 +35,47 @@ then
 
 elif [[ $var == 2 ]]
 then
-    echo "UPDATE N UPGRADE...\n"
+    echo -e "UPDATE N UPGRADE...\n"
     # update / upgrade
-    
-    sudo apt update >> /dev/null 
-    sudo apt upgrade >> /dev/null	
+   
+	echo -e "UPDATING...\n" 
+    sudo apt update  
+	echo -e "\n"
+	
+	echo -e "UPGRADING...\n"
+    sudo apt upgrade 	
+	echo -e "\n"
 
     sleep 1    
 
-    echo "AUTOREMOVE"
+    echo -e "AUTOREMOVE...\n"
     # remove unnecessary packages and dependencies
     sleep .5
     sudo apt autoremove 
+	echo -e "\n"
     sleep .5
 
     # clean thumbnail cache
-    echo "CLEANING CACHE"
+    echo -e "CLEANING CACHE...\n"
     sleep .5
     sudo rm -rf ~/.cache/thumbnails/*
+	echo -e "\n"
     sleep .5
     # clean apt cache
-    echo "CLEANING APT CACHE"
+    echo -e "CLEANING APT CACHE...\n"
     sleep .5
     sudo apt autoclean
+	echo -e "\n"
     sleep .5
     sudo apt clean
+	echo -e "\n"
     sleep .5
 
     # clean unused dependencies
-    echo "CLEANING DEPENDENCIES"
+    echo -e "CLEANING DEPENDENCIES...\n"
     sleep .5
     sudo apt autoremove
+	echo -e "\n"
 
 else 
     printf "Unknown Command !"
