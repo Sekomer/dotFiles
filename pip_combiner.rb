@@ -12,7 +12,7 @@ if array.size != 1
 	if array.size > 1
 		puts "[!ERROR!]"
 		puts "Too many arguments !"
-	else array.size < 1
+	else
 		puts "[!ERROR!]"
 		puts "Enter the package name !"
 	end
