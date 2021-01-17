@@ -18,7 +18,10 @@ else
 	(0...2).each do |n|
 		puts "Downloading for Python#{n + 2}\n"
 		
-		3.times {`printf "."`}
+		3.times {
+			print '.'
+			sleep(0.5)
+		}
 		
 		puts ""
 		puts `#{exe_arr[n]}`
