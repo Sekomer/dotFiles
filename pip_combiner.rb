@@ -8,12 +8,14 @@ v3_execute = "pip3 install #{__package__}"
 
 exe_arr = [v2_execute, v3_execute]
 
-if array.size > 1
-	puts "[!ERROR!]"
-	puts "Too many arguments !"
-elsif array.size < 1
-	puts "[!ERROR!]"
-	puts "Enter the package name !"
+if array.size != 1
+	if array.size > 1
+		puts "[!ERROR!]"
+		puts "Too many arguments !"
+	else array.size < 1
+		puts "[!ERROR!]"
+		puts "Enter the package name !"
+	end
 else
 	(0...2).each do |n|
 		puts "Downloading for Python#{n + 2}\n"
