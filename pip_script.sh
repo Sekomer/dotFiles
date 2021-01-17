@@ -22,20 +22,20 @@ for ((i = 0; i < $#; i++))
     
     printf "\n\n"
  	
- 	pip2 install ${args[$i]}
+    pip2 install ${args[$i]}
 
     sleep 1
 
     echo -e "${YL}\nDownloading ${args[$i]} for Python3${NC}"
  	
-	for ((k = 0; k < 3; k++))
+    for ((k = 0; k < 3; k++))
     {
     	printf "\033[0;31m. \033[0m"
     	sleep .5
     }
     
- 	printf "\n\n"
+    printf "\n\n"
  	
- 	pip3 install ${args[$i]}
+    pip3 install ${args[$i]}
 }
 
