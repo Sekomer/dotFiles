@@ -15,7 +15,7 @@ elsif array.size < 1
 	puts "[!ERROR!]"
 	puts "Enter the package name !"
 else
-	(0..2).each do |n|
+	(0...2).each do |n|
 		puts "Downloading for Python#{n + 2}\n"
 		
 		3.times {`printf "."`}
